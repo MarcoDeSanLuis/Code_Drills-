@@ -13,3 +13,22 @@ const findCommonChars = (word1, word2) => {
 }
 
 findCommonChars("apple", "pear");
+
+// find most common characters in a sentence
+
+const findMostCommonChars = (sent) => {
+  const charMap = {};
+  const mostCommonChars = [];
+  let maxFreq = 0;
+
+  sent.toLowerCase().split('').forEach(c => {
+    charMap[c] ? charMap[c]++ : charMap[c] = 1;
+  })
+
+  for (c in charMap) charMap[c] > maxFreq && (maxFreq = charMap[c]);
+  for (c in charMap) charMap[c] == maxFreq && mostCommonChars.push(c);
+
+  console.log(`Most common characters: ${mostCommonChars.join(", ")} | Occurences: ${maxFreq}`);
+}
+
+findMostCommonChars("Yabba, dabba, doo!!");
