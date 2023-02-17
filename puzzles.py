@@ -51,6 +51,22 @@ def shift_left(num_list, rotations):
     num_list.append(moved_num)
     i += 1
 
-  print(num_list)
+  print(f'Shift left: {num_list}')
 
 shift_left(my_nums, 2)
+
+# shift array right ----------------------------------
+
+more_nums = [1, 2, 3, 4, 5]
+
+def shift_right(num_list, rotations):
+  i = 0
+
+  while i < rotations:
+    moved_num = num_list.pop()
+    num_list.insert(0, moved_num)
+    i += 1
+
+  print(f'Shift right: {num_list}')
+
+shift_right(more_nums, 2)
