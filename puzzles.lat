@@ -1,0 +1,26 @@
+funcion escribalo (nombre)
+  saluda = "Hola " .. nombre
+  escribir(saluda)
+fin
+
+escribalo("Marco")
+
+funcion inverteLista(listaNormal)
+  escribir(lista.invertir(listaNormal))
+fin
+
+animales = ["perro", "gato", "caballo", "cabra", "ave", "vaca", "oveja", "ciervo"]
+inverteLista(animales)
+
+carros = ["Toyota", "Ford", "Nissan", "Chevy"]
+inverteLista(carros)
+
+funcion escribaLista(li)
+  desde(i = 0; i < lista.longitud(li); i++)
+    escribir(li[i])
+  fin
+fin
+
+numerosMios = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+escribaLista(numerosMios)
